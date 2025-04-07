@@ -28,5 +28,6 @@ public class AnswerFC {
 
     @ManyToOne
     @JoinColumn(name = "flashcardid", nullable = false)
+    @JsonBackReference
     private Flashcard flashcard;
 }
