@@ -40,7 +40,7 @@ public class Flashcard {
     @JoinColumn(name = "userid", nullable = false)
     @JsonBackReference
     private User user;
-
+    
     @ManyToOne
     @JoinColumn(name = "materialid")
     @JsonBackReference

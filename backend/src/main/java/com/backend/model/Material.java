@@ -28,6 +28,5 @@ public class Material {
 
     @ManyToOne
     @JoinColumn(name = "courseid", nullable = false)
-    @JsonBackReference
     private Course course;
 }
