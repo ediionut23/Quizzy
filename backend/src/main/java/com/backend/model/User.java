@@ -49,7 +49,6 @@ public class User {
     private String password;
 
     @OneToMany(mappedBy = "user")
-    @JsonManagedReference
     private Set<Enrollment> enrollments;
 
     @OneToMany(mappedBy = "user")
