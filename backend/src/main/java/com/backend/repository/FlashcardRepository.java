@@ -1,6 +1,7 @@
 package com.backend.repository;
 
 import com.backend.model.Flashcard;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -13,6 +14,7 @@ public interface FlashcardRepository extends JpaRepository<Flashcard, Long> {
     @Query("SELECT f FROM Flashcard f WHERE f.user.id = :userId")
     List<Flashcard> findByUserId(@Param("userId") Integer userId);
 
+public interface FlashcardRepository extends CrudRepository<Flashcard, Long> {
     @Query("SELECT f FROM Flashcard f WHERE f.material.id = :materialId")
     List<Flashcard> findByMaterialId(@Param("materialId") Long materialId);
 
